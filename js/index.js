@@ -71,6 +71,19 @@ const navList =document.querySelectorAll('.container a');
        }
    }
   console.log(myNode); */
+
+  //Add New 2Item
+    const myNode = document.querySelector('nav');
+    const  items = ['Home', 'Index'];
+    
+    for(var i=0; i<items.length; i++) {
+      var myA = document.createElement('a');
+       var x=myNode.appendChild(myA);
+       x.textContent=items[i];
+       x.style.color='green'
+      console.log(myNode)
+   }
+   
   //for image line 29
   const image=document.querySelector('header img');
   image.setAttribute("src", siteContent.nav['img-src']);
