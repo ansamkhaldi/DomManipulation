@@ -45,14 +45,19 @@ const siteContent = {
 // write your code here
 
 const navList =document.querySelectorAll('.container a');
-   navList[0].textContent = siteContent.nav['nav-item-1'];
+/*    navList[0].textContent = siteContent.nav['nav-item-1'];
    navList[1].textContent = siteContent.nav['nav-item-2'];
    navList[2].textContent = siteContent.nav['nav-item-3'];
    navList[3].textContent = siteContent.nav['nav-item-4'];
    navList[4].textContent = siteContent.nav['nav-item-5'];
    navList[5].textContent = siteContent.nav['nav-item-6'];
    
-   navList.forEach(e => e.style.color = 'green'); 
+   navList.forEach(e => e.style.color = 'green');  */
+   
+   navList.forEach((item, i) => {
+  item.textContent = siteContent.nav[`nav-item-${i + 1}`]; 
+  item.style.color = 'green';
+})
    
    //Add <a> <img> </a> to nav
 /*    var myNode = document.querySelector('nav');
@@ -90,10 +95,11 @@ const navList =document.querySelectorAll('.container a');
   
 
   //for class cta in section line 37
+  //getElementsByTagName("button")[0];
   const CTA= document.querySelector('.cta-text h1');
    CTA.textContent=siteContent.cta['h1'];
 
-   const textButton = document.getElementsByTagName("button")[0];
+   const textButton = document.querySelector(".cta button");
    textButton.textContent = siteContent.cta['button'] ;
 
    //for image line 42
